@@ -37,5 +37,15 @@ public class StringUtilTest {
 			System.out.println(str);
 		}
 	}
-
+	
+	@Test
+	public void test() {
+		String str = "1a1.1";
+		System.out.println(StringUtil.isNumber(str));
+		String email = "cuiqiang@112163";
+		System.out.println(StringUtil.isEMail(email));
+		String phone = "133555555555";
+		System.out.println(StringUtil.isPhone(phone));
+	}
+	
 }

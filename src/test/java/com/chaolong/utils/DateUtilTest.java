@@ -40,10 +40,25 @@ public class DateUtilTest {
 			System.out.println(i+1+"--"+p);
 			
 		}
+	}
+	@Test
+	public void getBenginMonthTest() {
+		Date date = DateUtil.getBenginMonth(new Date());
 		
-		
-		
+		System.out.println(DateUtil.transitionDateToString(date));
 	}
 	
-
+	@Test
+	public void getEndMonthTest() {
+		Date date = DateUtil.getEndMonth(new Date());
+		
+		System.out.println(DateUtil.transitionDateToString(date));
+	}
+	@Test
+	public void getAgeByBirthdayTest() {
+		Calendar cal = Calendar.getInstance();
+		cal.set(2000, 3, 25);
+		int age = DateUtil.getAgeByBirthday(cal.getTime());
+		System.out.println(age);
+	}
 }

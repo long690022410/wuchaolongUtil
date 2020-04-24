@@ -2,6 +2,8 @@ package com.chaolong.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 
@@ -79,4 +81,48 @@ public class StringUtil {
 		
 		return s1 + s2;
 	}
+	/**
+	 * 
+	 * @Title: isNumber 
+	 * @Description: 判断一个字符串是否是数字 考虑整数 负数 小数
+	 * @param str
+	 * @return
+	 * @return: boolean
+	 */
+	public static boolean isNumber(String str) {
+		String reg = "^(-)?\\d+(\\.\\d+)?$";
+		
+		return str.matches(reg);
+	}
+	/**
+	 * 
+	 * @Title: isPhone 
+	 * @Description: 判断是否是中国的手机号
+	 * @param src
+	 * @return
+	 * @return: boolean
+	 */
+	public static boolean isPhone(String str) {
+		String reg = "^1[3|4|5|7|8]\\d{9}$";
+		return str.matches(reg);
+	}
+	/**
+	 * 
+	 * @Title: isEMail 
+	 * @Description: 判断是否是邮箱
+	 * @param src
+	 * @return
+	 * @return: boolean
+	 */
+	public static boolean isEMail(String src) {
+		String reg = "\\w+\\@\\w+\\.\\w+";
+		return src.matches(reg);
+	}
+	
+	
+	
+	
+	
+	
+	
 }
