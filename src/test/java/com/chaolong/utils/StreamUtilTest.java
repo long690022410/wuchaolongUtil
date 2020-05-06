@@ -29,7 +29,18 @@ public class StreamUtilTest {
 		}
 	}
 	
-	
+	@Test
+	public void test() {
+		String path = "F:\\maven\\hello.txt";
+		try {
+			String read = StreamUtil.read(new FileInputStream(new File(path)));
+			System.out.println(read);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	
 	

@@ -119,8 +119,28 @@ public class StreamUtil {
 		
 		return list;
 	}
-	
-	
+	/**
+	 * 
+	 * @Title: read 
+	 * @Description: 按字节读取 一次读取1024位
+	 * @param in
+	 * @return
+	 * @return: String
+	 */
+	public static String read(InputStream in) {
+		byte[] b = new byte[1024];
+		int i ;
+		try {
+			while((i = in.read(b)) != -1) {
+				return new String(b,0,i);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
 	
 	
 	

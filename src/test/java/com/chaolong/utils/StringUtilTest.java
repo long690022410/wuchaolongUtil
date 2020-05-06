@@ -1,9 +1,7 @@
 package com.chaolong.utils;
 
-import static org.junit.Assert.*;
-
-import java.util.Calendar;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -46,6 +44,12 @@ public class StringUtilTest {
 		System.out.println(StringUtil.isEMail(email));
 		String phone = "133555555555";
 		System.out.println(StringUtil.isPhone(phone));
+	}
+	
+	@Test
+	public void Test() {
+		
+		
 	}
 	
 }
